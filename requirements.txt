@@ -1,0 +1,16 @@
+# requirements.txt
+fastapi
+uvicorn[standard]
+pydantic
+requests
+python-multipart
+
+# Logging
+python-json-logger
+coloredlogs
+
+# Monitoring and health
+psutil
+
+# Testing (also in requirements-dev.txt)
+pytest

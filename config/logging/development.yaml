@@ -1,0 +1,44 @@
+
+# config/logging/development.yaml
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  coloredlogs:
+    class: coloredlogs.ColoredFormatter
+    format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+    datefmt: "%H:%M:%S"
+  
+  detailed:
+    format: "%(asctime)s [%(levelname)s] %(name)s:%(lineno)d - %(funcName)s(): %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: coloredlogs
+    stream: ext://sys.stdout
+  
+  file_debug:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: detailed
+    filename: /app/logs/debug.log
+    mode: w
+    encoding: utf8
+
+loggers:
+  app:
+    level: DEBUG
+    handlers: [console, file_debug]
+    propagate: false
+  
+  uvicorn:
+    level: INFO
+    handlers: [console]
+    propagate: false
+
+root:
+  level: DEBUG
+  handlers: [console, file_debug]

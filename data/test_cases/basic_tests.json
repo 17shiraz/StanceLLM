@@ -1,0 +1,76 @@
+{
+    "basic_test_cases": {
+      "description": "Basic test cases for stance detection functionality",
+      "test_categories": {
+        "clear_favor": {
+          "description": "Texts with clear favorable stance",
+          "cases": [
+            {
+              "id": "clear_favor_001",
+              "target": "Renewable Energy",
+              "text": "Solar and wind power are amazing technologies that will save our planet!",
+              "expected_stance": "FAVOR"
+            },
+            {
+              "id": "clear_favor_002", 
+              "target": "Public Transportation",
+              "text": "Public transit systems are efficient, affordable, and environmentally friendly.",
+              "expected_stance": "FAVOR"
+            },
+            {
+              "id": "clear_favor_003",
+              "target": "Universal Basic Income",
+              "text": "UBI would eliminate poverty and give people freedom to pursue meaningful work.",
+              "expected_stance": "FAVOR"
+            }
+          ]
+        },
+        "clear_against": {
+          "description": "Texts with clear opposing stance",
+          "cases": [
+            {
+              "id": "clear_against_001",
+              "target": "Coal Energy",
+              "text": "Coal power plants are dirty, outdated, and harmful to public health.",
+              "expected_stance": "AGAINST"
+            },
+            {
+              "id": "clear_against_002",
+              "target": "Surveillance Technology", 
+              "text": "Mass surveillance violates privacy rights and threatens democratic freedoms.",
+              "expected_stance": "AGAINST"
+            },
+            {
+              "id": "clear_against_003",
+              "target": "Factory Farming",
+              "text": "Industrial agriculture is cruel to animals and destroys the environment.",
+              "expected_stance": "AGAINST"
+            }
+          ]
+        },
+        "clear_none": {
+          "description": "Texts with no clear stance",
+          "cases": [
+            {
+              "id": "clear_none_001",
+              "target": "Climate Policy",
+              "text": "The weather forecast shows rain tomorrow with temperatures around 65 degrees.",
+              "expected_stance": "NONE"
+            },
+            {
+              "id": "clear_none_002",
+              "target": "Healthcare Reform",
+              "text": "The hospital is located on Main Street next to the library.",
+              "expected_stance": "NONE"
+            },
+            {
+              "id": "clear_none_003",
+              "target": "Education Policy",
+              "text": "School starts at 8 AM and ends at 3 PM Monday through Friday.",
+              "expected_stance": "NONE"
+            }
+          ]
+        }
+      }
+    }
+  }

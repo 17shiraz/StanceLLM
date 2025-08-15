@@ -1,0 +1,56 @@
+{
+    "multilingual_test_cases": {
+      "description": "Test cases for multilingual stance detection",
+      "supported_languages": ["en", "es", "fr", "de", "it"],
+      "test_samples": {
+        "spanish": [
+          {
+            "id": "es_001",
+            "target": "Energía Renovable",
+            "text": "La energía solar es el futuro de nuestro planeta",
+            "expected_stance": "FAVOR",
+            "translation": "Solar energy is the future of our planet"
+          },
+          {
+            "id": "es_002", 
+            "target": "Cambio Climático",
+            "text": "El cambio climático es una mentira inventada por los políticos",
+            "expected_stance": "AGAINST",
+            "translation": "Climate change is a lie invented by politicians"
+          }
+        ],
+        "french": [
+          {
+            "id": "fr_001",
+            "target": "Intelligence Artificielle",
+            "text": "L'IA va révolutionner la médecine et sauver des vies",
+            "expected_stance": "FAVOR",
+            "translation": "AI will revolutionize medicine and save lives"
+          },
+          {
+            "id": "fr_002",
+            "target": "Réseaux Sociaux", 
+            "text": "Les réseaux sociaux détruisent les relations humaines authentiques",
+            "expected_stance": "AGAINST",
+            "translation": "Social networks destroy authentic human relationships"
+          }
+        ],
+        "german": [
+          {
+            "id": "de_001",
+            "target": "Kernenergie",
+            "text": "Kernkraft ist eine saubere und effiziente Energiequelle",
+            "expected_stance": "FAVOR",
+            "translation": "Nuclear power is a clean and efficient energy source"
+          },
+          {
+            "id": "de_002",
+            "target": "Überwachung",
+            "text": "Massenüberwachung verletzt unsere Grundrechte",
+            "expected_stance": "AGAINST", 
+            "translation": "Mass surveillance violates our fundamental rights"
+          }
+        ]
+      }
+    }
+  }

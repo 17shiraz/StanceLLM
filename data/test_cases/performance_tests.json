@@ -1,0 +1,105 @@
+{
+    "performance_test_cases": {
+      "description": "Test cases designed for performance benchmarking",
+      "load_test_data": {
+        "small_batch": {
+          "description": "Small batch for quick testing",
+          "size": 10,
+          "samples": [
+            {"target": "Coffee", "text": "I love my morning coffee routine"},
+            {"target": "Traffic", "text": "Rush hour traffic is incredibly frustrating"},
+            {"target": "Music", "text": "The concert venue has excellent acoustics"},
+            {"target": "Exercise", "text": "Regular workouts improve mental health significantly"},
+            {"target": "Technology", "text": "Smartphones have revolutionized communication"},
+            {"target": "Books", "text": "Reading expands knowledge and imagination"},
+            {"target": "Travel", "text": "Exploring new places broadens perspectives"},
+            {"target": "Food", "text": "Local restaurants serve authentic cuisine"},
+            {"target": "Weather", "text": "Sunny days boost mood and energy"},
+            {"target": "Work", "text": "Remote work offers flexibility and convenience"}
+          ]
+        },
+        "medium_batch": {
+          "description": "Medium batch for standard testing",
+          "size": 50,
+          "template": {
+            "targets": ["Policy A", "Policy B", "Technology X", "Service Y", "Product Z"],
+            "sentiment_patterns": [
+              "strongly support",
+              "completely oppose", 
+              "think it's okay",
+              "have mixed feelings about",
+              "don't really care about"
+            ],
+            "contexts": [
+              "for economic reasons",
+              "due to environmental concerns", 
+              "based on social impact",
+              "considering long-term effects",
+              "from a practical standpoint"
+            ]
+          }
+        },
+        "large_batch": {
+          "description": "Large batch for stress testing",
+          "size": 200,
+          "auto_generated": true,
+          "generation_params": {
+            "targets": 20,
+            "stance_distribution": {"FAVOR": 0.4, "AGAINST": 0.4, "NONE": 0.2},
+            "text_length_range": [10, 200],
+            "complexity_levels": ["simple", "medium", "complex"]
+          }
+        }
+      },
+      "stress_test_scenarios": {
+        "concurrent_requests": {
+          "description": "Test concurrent request handling",
+          "scenarios": [
+            {"concurrent_users": 1, "requests_per_user": 10},
+            {"concurrent_users": 5, "requests_per_user": 10},
+            {"concurrent_users": 10, "requests_per_user": 5},
+            {"concurrent_users": 20, "requests_per_user": 5}
+          ]
+        },
+        "text_length_variation": {
+          "description": "Test with varying text lengths",
+          "cases": [
+            {"length": "short", "char_range": [1, 50], "samples": 20},
+            {"length": "medium", "char_range": [51, 500], "samples": 20},
+            {"length": "long", "char_range": [501, 2000], "samples": 10},
+            {"length": "very_long", "char_range": [2001, 5000], "samples": 5}
+          ]
+        },
+        "model_switching": {
+          "description": "Test model switching performance",
+          "sequence": [
+            {"model": "llama2", "requests": 5},
+            {"model": "mistral", "requests": 5},
+            {"model": "phi3", "requests": 5},
+            {"model": "llama2", "requests": 5}
+          ]
+        }
+      },
+      "benchmark_targets": {
+        "response_time": {
+          "p50": "< 2.0 seconds",
+          "p90": "< 5.0 seconds", 
+          "p99": "< 10.0 seconds"
+        },
+        "throughput": {
+          "requests_per_second": "> 1.0",
+          "concurrent_requests": "> 5"
+        },
+        "accuracy": {
+          "simple_cases": "> 0.90",
+          "complex_cases": "> 0.70",
+          "overall": "> 0.80"
+        },
+        "resource_usage": {
+          "memory": "< 8GB",
+          "cpu": "< 80%",
+          "disk": "< 50GB"
+        }
+      }
+    }
+  }

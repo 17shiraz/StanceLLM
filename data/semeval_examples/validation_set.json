@@ -1,0 +1,228 @@
+{
+    "validation_dataset": {
+      "description": "Validation dataset for stance detection model evaluation",
+      "metadata": {
+        "total_samples": 50,
+        "targets": 10,
+        "stance_distribution": {
+          "FAVOR": 18,
+          "AGAINST": 17, 
+          "NONE": 15
+        },
+        "creation_date": "2024-12-01",
+        "version": "1.0"
+      },
+      "validation_samples": [
+        {
+          "id": "val_001",
+          "target": "Electric Vehicles",
+          "text": "Electric cars are the future! Zero emissions and lower operating costs make them superior to gas vehicles.",
+          "stance": "FAVOR",
+          "category": "environmental_technology"
+        },
+        {
+          "id": "val_002",
+          "target": "Electric Vehicles", 
+          "text": "Electric vehicles are too expensive and the charging infrastructure is inadequate for widespread adoption.",
+          "stance": "AGAINST",
+          "category": "environmental_technology"
+        },
+        {
+          "id": "val_003",
+          "target": "Electric Vehicles",
+          "text": "The auto industry is rapidly evolving with new technologies emerging each year.",
+          "stance": "NONE",
+          "category": "environmental_technology"
+        },
+        {
+          "id": "val_004",
+          "target": "Remote Work",
+          "text": "Working from home has improved my work-life balance and productivity significantly.",
+          "stance": "FAVOR", 
+          "category": "workplace_policy"
+        },
+        {
+          "id": "val_005",
+          "target": "Remote Work",
+          "text": "Remote work destroys team collaboration and company culture.",
+          "stance": "AGAINST",
+          "category": "workplace_policy"
+        },
+        {
+          "id": "val_006",
+          "target": "Remote Work",
+          "text": "Many companies are reviewing their workplace policies this year.",
+          "stance": "NONE",
+          "category": "workplace_policy"
+        },
+        {
+          "id": "val_007",
+          "target": "Cryptocurrency",
+          "text": "Bitcoin and other cryptocurrencies provide financial freedom and protection against inflation.",
+          "stance": "FAVOR",
+          "category": "financial_technology"
+        },
+        {
+          "id": "val_008",
+          "target": "Cryptocurrency",
+          "text": "Cryptocurrency is a speculative bubble that enables money laundering and fraud.",
+          "stance": "AGAINST",
+          "category": "financial_technology"
+        },
+        {
+          "id": "val_009",
+          "target": "Cryptocurrency",
+          "text": "Financial markets experienced significant volatility last quarter.",
+          "stance": "NONE",
+          "category": "financial_technology"
+        },
+        {
+          "id": "val_010",
+          "target": "Artificial Intelligence",
+          "text": "AI will revolutionize healthcare, education, and scientific research for the better.",
+          "stance": "FAVOR",
+          "category": "technology"
+        },
+        {
+          "id": "val_011", 
+          "target": "Artificial Intelligence",
+          "text": "AI poses existential risks to humanity and will lead to massive job displacement.",
+          "stance": "AGAINST",
+          "category": "technology"
+        },
+        {
+          "id": "val_012",
+          "target": "Artificial Intelligence",
+          "text": "Technology companies are investing heavily in research and development.",
+          "stance": "NONE",
+          "category": "technology"
+        },
+        {
+          "id": "val_013",
+          "target": "Nuclear Energy",
+          "text": "Nuclear power is the cleanest and most reliable source of carbon-free energy.",
+          "stance": "FAVOR",
+          "category": "energy_policy"
+        },
+        {
+          "id": "val_014",
+          "target": "Nuclear Energy",
+          "text": "Nuclear power plants are dangerous and create radioactive waste that lasts millennia.",
+          "stance": "AGAINST",
+          "category": "energy_policy"
+        },
+        {
+          "id": "val_015",
+          "target": "Nuclear Energy",
+          "text": "Energy production involves various technologies and fuel sources.",
+          "stance": "NONE",
+          "category": "energy_policy"
+        },
+        {
+          "id": "val_016",
+          "target": "Social Media",
+          "text": "Social media platforms connect people globally and democratize information sharing.",
+          "stance": "FAVOR",
+          "category": "technology_social"
+        },
+        {
+          "id": "val_017",
+          "target": "Social Media",
+          "text": "Social media spreads misinformation and negatively impacts mental health.",
+          "stance": "AGAINST",
+          "category": "technology_social"
+        },
+        {
+          "id": "val_018",
+          "target": "Social Media",
+          "text": "Internet usage has grown exponentially over the past two decades.",
+          "stance": "NONE",
+          "category": "technology_social"
+        },
+        {
+          "id": "val_019",
+          "target": "Minimum Wage Increase",
+          "text": "Raising the minimum wage will help workers afford basic necessities and stimulate the economy.",
+          "stance": "FAVOR",
+          "category": "economic_policy"
+        },
+        {
+          "id": "val_020",
+          "target": "Minimum Wage Increase", 
+          "text": "Higher minimum wages will force small businesses to cut jobs and raise prices.",
+          "stance": "AGAINST",
+          "category": "economic_policy"
+        },
+        {
+          "id": "val_021",
+          "target": "Minimum Wage Increase",
+          "text": "Labor economists study the relationship between wages and employment levels.",
+          "stance": "NONE",
+          "category": "economic_policy"
+        },
+        {
+          "id": "val_022",
+          "target": "School Choice",
+          "text": "School voucher programs give parents options and improve educational outcomes through competition.",
+          "stance": "FAVOR",
+          "category": "education_policy"
+        },
+        {
+          "id": "val_023",
+          "target": "School Choice",
+          "text": "School vouchers drain funding from public schools and increase inequality.",
+          "stance": "AGAINST",
+          "category": "education_policy"
+        },
+        {
+          "id": "val_024",
+          "target": "School Choice",
+          "text": "Education policy varies significantly across different states and districts.",
+          "stance": "NONE",
+          "category": "education_policy"
+        },
+        {
+          "id": "val_025",
+          "target": "Space Exploration",
+          "text": "Space missions advance scientific knowledge and inspire technological innovation.",
+          "stance": "FAVOR",
+          "category": "science_policy"
+        },
+        {
+          "id": "val_026",
+          "target": "Space Exploration",
+          "text": "Space exploration wastes billions that could solve problems on Earth like poverty and disease.",
+          "stance": "AGAINST",
+          "category": "science_policy"
+        },
+        {
+          "id": "val_027",
+          "target": "Space Exploration",
+          "text": "NASA recently announced updates to their mission timeline.",
+          "stance": "NONE",
+          "category": "science_policy"
+        },
+        {
+          "id": "val_028",
+          "target": "Gene Editing",
+          "text": "CRISPR technology could eliminate genetic diseases and improve human health.",
+          "stance": "FAVOR",
+          "category": "biotechnology"
+        },
+        {
+          "id": "val_029",
+          "target": "Gene Editing",
+          "text": "Gene editing is playing God and could have unforeseen consequences for humanity.",
+          "stance": "AGAINST",
+          "category": "biotechnology"
+        },
+        {
+          "id": "val_030",
+          "target": "Gene Editing",
+          "text": "Scientific research continues to advance in multiple fields of biology.",
+          "stance": "NONE",
+          "category": "biotechnology"
+        }
+      ]
+    }
+  }

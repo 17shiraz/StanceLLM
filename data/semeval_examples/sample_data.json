@@ -1,0 +1,154 @@
+{
+    "semeval_2016_stance_samples": {
+      "description": "Sample data from SemEval 2016 Task 6: Detecting Stance in Tweets",
+      "targets": ["Donald Trump", "Hillary Clinton", "Climate Change is a Real Concern", "Feminist Movement", "Atheism"],
+      "stance_labels": ["FAVOR", "AGAINST", "NONE"],
+      "samples": [
+        {
+          "id": "sample_001",
+          "target": "Donald Trump",
+          "text": "Trump will make America great again! Best president ever! #MAGA",
+          "stance": "FAVOR",
+          "reasoning": "Clear expression of support with enthusiastic language and positive evaluation"
+        },
+        {
+          "id": "sample_002", 
+          "target": "Donald Trump",
+          "text": "Trump's policies are destroying our democracy and dividing the nation",
+          "stance": "AGAINST",
+          "reasoning": "Direct criticism of Trump's policies with negative impact assessment"
+        },
+        {
+          "id": "sample_003",
+          "target": "Donald Trump", 
+          "text": "The weather is really nice today, perfect for a walk in the park",
+          "stance": "NONE",
+          "reasoning": "Text is completely unrelated to Donald Trump"
+        },
+        {
+          "id": "sample_004",
+          "target": "Hillary Clinton",
+          "text": "Hillary Clinton has the experience and qualifications needed to lead our country",
+          "stance": "FAVOR", 
+          "reasoning": "Positive evaluation of Clinton's qualifications and leadership ability"
+        },
+        {
+          "id": "sample_005",
+          "target": "Hillary Clinton",
+          "text": "Clinton's email scandal proves she can't be trusted with classified information",
+          "stance": "AGAINST",
+          "reasoning": "Criticism based on email controversy, questioning trustworthiness"
+        },
+        {
+          "id": "sample_006",
+          "target": "Hillary Clinton",
+          "text": "Both candidates attended the debate last night in New York",
+          "stance": "NONE",
+          "reasoning": "Factual statement without expressing stance toward Clinton specifically"
+        },
+        {
+          "id": "sample_007",
+          "target": "Climate Change is a Real Concern",
+          "text": "Climate change is the biggest threat facing humanity. We must act now!",
+          "stance": "FAVOR",
+          "reasoning": "Strong agreement that climate change is a serious concern requiring action"
+        },
+        {
+          "id": "sample_008",
+          "target": "Climate Change is a Real Concern", 
+          "text": "Climate change is a hoax created by scientists to get more funding",
+          "stance": "AGAINST",
+          "reasoning": "Dismisses climate change as fraudulent, opposing the concern"
+        },
+        {
+          "id": "sample_009",
+          "target": "Climate Change is a Real Concern",
+          "text": "Temperature records show variations over the past century",
+          "stance": "NONE",
+          "reasoning": "Neutral factual statement about temperature data without taking position"
+        },
+        {
+          "id": "sample_010",
+          "target": "Feminist Movement",
+          "text": "Feminism has achieved great progress in advancing women's rights and equality",
+          "stance": "FAVOR",
+          "reasoning": "Positive evaluation of feminist movement's achievements"
+        },
+        {
+          "id": "sample_011",
+          "target": "Feminist Movement",
+          "text": "Modern feminism has gone too far and is now promoting inequality against men",
+          "stance": "AGAINST", 
+          "reasoning": "Criticism of feminism, claiming it has negative effects"
+        },
+        {
+          "id": "sample_012",
+          "target": "Feminist Movement",
+          "text": "The conference will discuss various social movements throughout history",
+          "stance": "NONE",
+          "reasoning": "General reference without specific stance toward feminism"
+        },
+        {
+          "id": "sample_013",
+          "target": "Atheism",
+          "text": "Atheism provides a rational, evidence-based worldview free from superstition",
+          "stance": "FAVOR",
+          "reasoning": "Positive characterization of atheism as rational and evidence-based"
+        },
+        {
+          "id": "sample_014",
+          "target": "Atheism",
+          "text": "Atheism leads to moral relativism and the breakdown of societal values",
+          "stance": "AGAINST",
+          "reasoning": "Negative characterization claiming atheism has harmful consequences"
+        },
+        {
+          "id": "sample_015",
+          "target": "Atheism",
+          "text": "Philosophy courses examine different perspectives on religion and belief systems",
+          "stance": "NONE",
+          "reasoning": "Academic context mentioning various beliefs without taking position on atheism"
+        }
+      ]
+    },
+    "additional_examples": {
+      "description": "Additional challenging examples for model evaluation",
+      "samples": [
+        {
+          "id": "challenge_001",
+          "target": "Gun Control",
+          "text": "While I support gun rights, some common-sense safety measures make sense",
+          "stance": "FAVOR",
+          "reasoning": "Despite supporting gun rights, endorses safety measures (gun control)"
+        },
+        {
+          "id": "challenge_002",
+          "target": "Universal Healthcare",
+          "text": "Healthcare costs are bankrupting families, but government-run healthcare isn't the answer",
+          "stance": "AGAINST",
+          "reasoning": "Acknowledges healthcare problems but opposes government-run solution"
+        },
+        {
+          "id": "challenge_003",
+          "target": "Immigration Reform",
+          "text": "Immigration is a complex issue with valid concerns on all sides",
+          "stance": "NONE",
+          "reasoning": "Neutral acknowledgment of complexity without taking position"
+        },
+        {
+          "id": "challenge_004",
+          "target": "Social Media Regulation",
+          "text": "Big tech companies have too much power over public discourse! #RegulateNow",
+          "stance": "FAVOR",
+          "reasoning": "Calls for regulation of social media companies"
+        },
+        {
+          "id": "challenge_005",
+          "target": "Renewable Energy",
+          "text": "Solar panels are getting cheaper every year",
+          "stance": "NONE",
+          "reasoning": "Factual statement about solar panel costs without expressing position on renewable energy policy"
+        }
+      ]
+    }
+  }

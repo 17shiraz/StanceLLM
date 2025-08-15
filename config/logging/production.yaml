@@ -1,0 +1,76 @@
+# config/logging/production.yaml
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  json:
+    class: pythonjsonlogger.jsonlogger.JsonFormatter
+    format: "%(asctime)s %(name)s %(levelname)s %(message)s %(pathname)s %(lineno)d %(process)d %(thread)d"
+  
+  standard:
+    format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: json
+    stream: ext://sys.stdout
+  
+  file_app:
+    class: logging.handlers.RotatingFileHandler
+    level: INFO
+    formatter: json
+    filename: /app/logs/app.log
+    maxBytes: 52428800  # 50MB
+    backupCount: 10
+    encoding: utf8
+  
+  file_error:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: json
+    filename: /app/logs/error.log
+    maxBytes: 52428800  # 50MB
+    backupCount: 10
+    encoding: utf8
+  
+  file_access:
+    class: logging.handlers.RotatingFileHandler
+    level: INFO
+    formatter: json
+    filename: /app/logs/access.log
+    maxBytes: 52428800  # 50MB
+    backupCount: 10
+    encoding: utf8
+
+loggers:
+  app:
+    level: INFO
+    handlers: [console, file_app, file_error]
+    propagate: false
+  
+  uvicorn:
+    level: INFO
+    handlers: [console, file_app]
+    propagate: false
+  
+  uvicorn.access:
+    level: INFO
+    handlers: [file_access]
+    propagate: false
+  
+  gunicorn:
+    level: INFO
+    handlers: [console, file_app]
+    propagate: false
+  
+  gunicorn.access:
+    level: INFO
+    handlers: [file_access]
+    propagate: false
+
+root:
+  level: WARNING
+  handlers: [console, file_error]

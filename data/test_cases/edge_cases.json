@@ -1,0 +1,229 @@
+{
+    "edge_case_tests": {
+      "description": "Edge cases and challenging scenarios for stance detection",
+      "test_categories": {
+        "ambiguous": {
+          "description": "Ambiguous texts that could be interpreted multiple ways",
+          "cases": [
+            {
+              "id": "ambiguous_001",
+              "target": "Tax Reform",
+              "text": "The proposed tax changes have both supporters and critics making valid points.",
+              "expected_stance": "NONE",
+              "difficulty": "medium"
+            },
+            {
+              "id": "ambiguous_002",
+              "target": "Online Privacy",
+              "text": "Digital privacy is important, but so is national security.",
+              "expected_stance": "NONE",
+              "difficulty": "medium"
+            },
+            {
+              "id": "ambiguous_003",
+              "target": "Free Trade",
+              "text": "Trade agreements have complex economic impacts that experts debate.",
+              "expected_stance": "NONE", 
+              "difficulty": "high"
+            }
+          ]
+        },
+        "sarcastic": {
+          "description": "Sarcastic or ironic texts",
+          "cases": [
+            {
+              "id": "sarcastic_001",
+              "target": "Traffic Congestion",
+              "text": "Oh great, another traffic jam. I just LOVE sitting in my car for hours.",
+              "expected_stance": "AGAINST",
+              "difficulty": "high"
+            },
+            {
+              "id": "sarcastic_002",
+              "target": "Long Meetings",
+              "text": "Another 3-hour meeting that could have been an email. So productive!",
+              "expected_stance": "AGAINST",
+              "difficulty": "high"
+            },
+            {
+              "id": "sarcastic_003",
+              "target": "Expensive Coffee",
+              "text": "Seven dollars for a cup of coffee? What a bargain!",
+              "expected_stance": "AGAINST",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "implicit": {
+          "description": "Texts with implicit rather than explicit stance",
+          "cases": [
+            {
+              "id": "implicit_001",
+              "target": "Fast Food",
+              "text": "After eating that burger, I felt sluggish and regretted my lunch choice.",
+              "expected_stance": "AGAINST",
+              "difficulty": "medium"
+            },
+            {
+              "id": "implicit_002",
+              "target": "Exercise",
+              "text": "My morning run always leaves me energized and ready to tackle the day.",
+              "expected_stance": "FAVOR",
+              "difficulty": "medium"
+            },
+            {
+              "id": "implicit_003",
+              "target": "Reading Books",
+              "text": "Whenever I finish a good book, I feel like I've lived multiple lives and learned so much.",
+              "expected_stance": "FAVOR",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "conditional": {
+          "description": "Conditional or hypothetical statements",
+          "cases": [
+            {
+              "id": "conditional_001",
+              "target": "Autonomous Vehicles",
+              "text": "If self-driving cars were truly safe, they could revolutionize transportation.",
+              "expected_stance": "FAVOR",
+              "difficulty": "high"
+            },
+            {
+              "id": "conditional_002",
+              "target": "Universal Healthcare",
+              "text": "Universal healthcare might work if it were properly funded and managed.",
+              "expected_stance": "FAVOR",
+              "difficulty": "high"
+            },
+            {
+              "id": "conditional_003",
+              "target": "Nuclear Weapons",
+              "text": "Nuclear weapons would be acceptable only as a last resort for national defense.",
+              "expected_stance": "AGAINST",
+              "difficulty": "high"
+            }
+          ]
+        },
+        "mixed_signals": {
+          "description": "Texts containing both positive and negative elements",
+          "cases": [
+            {
+              "id": "mixed_001",
+              "target": "Social Media",
+              "text": "Social media helps me stay connected with friends, but it also wastes too much of my time.",
+              "expected_stance": "NONE",
+              "difficulty": "high"
+            },
+            {
+              "id": "mixed_002",
+              "target": "Online Shopping",
+              "text": "Online shopping is convenient and saves time, though it hurts local businesses.",
+              "expected_stance": "NONE",
+              "difficulty": "high"
+            },
+            {
+              "id": "mixed_003",
+              "target": "Electric Scooters",
+              "text": "E-scooters are fun and eco-friendly but they clutter sidewalks and cause accidents.",
+              "expected_stance": "NONE",
+              "difficulty": "high"
+            }
+          ]
+        },
+        "short_text": {
+          "description": "Very short texts with minimal context",
+          "cases": [
+            {
+              "id": "short_001",
+              "target": "Pizza",
+              "text": "Love it!",
+              "expected_stance": "FAVOR",
+              "difficulty": "medium"
+            },
+            {
+              "id": "short_002",
+              "target": "Mondays",
+              "text": "Ugh.",
+              "expected_stance": "AGAINST",
+              "difficulty": "medium"
+            },
+            {
+              "id": "short_003",
+              "target": "Weather",
+              "text": "Cloudy today.",
+              "expected_stance": "NONE",
+              "difficulty": "easy"
+            }
+          ]
+        },
+        "long_text": {
+          "description": "Long texts that may dilute stance signals",
+          "cases": [
+            {
+              "id": "long_001",
+              "target": "Climate Action",
+              "text": "Throughout history, humanity has faced numerous challenges that required global cooperation and innovative solutions. From the industrial revolution to the digital age, we have consistently adapted to changing circumstances. Today, we face perhaps our greatest challenge yet in addressing climate change. The scientific consensus is clear that human activities are contributing to global warming, and the consequences are already visible in rising sea levels, extreme weather events, and ecosystem disruption. While some argue that economic costs are too high, the long-term benefits of transitioning to renewable energy sources far outweigh the short-term investments required. We must act decisively to protect our planet for future generations.",
+              "expected_stance": "FAVOR",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "multiple_targets": {
+          "description": "Texts mentioning multiple potential targets",
+          "cases": [
+            {
+              "id": "multi_001",
+              "target": "Biden",
+              "text": "Both Biden and Trump have their strengths, but Biden's experience in foreign policy gives him an edge.",
+              "expected_stance": "FAVOR",
+              "difficulty": "high"
+            },
+            {
+              "id": "multi_002", 
+              "target": "Renewable Energy",
+              "text": "While fossil fuels have powered our economy, renewable energy sources like solar and wind represent our future.",
+              "expected_stance": "FAVOR",
+              "difficulty": "medium"
+            }
+          ]
+        },
+        "technical_language": {
+          "description": "Texts with technical or specialized language",
+          "cases": [
+            {
+              "id": "technical_001",
+              "target": "Machine Learning",
+              "text": "The backpropagation algorithm's efficiency in gradient descent optimization makes neural networks superior to traditional statistical methods.",
+              "expected_stance": "FAVOR",
+              "difficulty": "medium"
+            },
+            {
+              "id": "technical_002",
+              "target": "Quantum Computing", 
+              "text": "Quantum decoherence and error rates in current NISQ devices limit practical applications significantly.",
+              "expected_stance": "AGAINST",
+              "difficulty": "high"
+            }
+          ]
+        }
+      },
+      "evaluation_metrics": {
+        "accuracy_by_difficulty": {
+          "easy": {"target_accuracy": 0.95, "samples": 3},
+          "medium": {"target_accuracy": 0.80, "samples": 15},
+          "high": {"target_accuracy": 0.65, "samples": 12}
+        },
+        "category_performance": {
+          "clear_stance": {"target_accuracy": 0.90},
+          "ambiguous": {"target_accuracy": 0.70},
+          "sarcastic": {"target_accuracy": 0.60},
+          "implicit": {"target_accuracy": 0.75},
+          "conditional": {"target_accuracy": 0.65},
+          "mixed_signals": {"target_accuracy": 0.60}
+        }
+      }
+    }
+  }
+  
